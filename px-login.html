@@ -30,18 +30,18 @@ Element providing a login/logout button that integrates nicely with Cloud Foundr
   <template>
     <style include="px-login-styles"></style>
     <iron-ajax id="userInfoAjax" url="{{userInfoUrl}}" handle-as="json" method="GET"></iron-ajax>
-    <div id="logincontainer">
-        <button class="btn btn--bare" id="loginButton" hidden$="{{!_showLogin}}">
+    <div>
+        <button  style="width:180px" class="btn btn--bare" id="loginButton" hidden$="{{!_showLogin}}">
           <i class="fa fa-user text--center u-mr--"></i> Sign In
         </button>
       <div hidden$="{{_showLogin}}">
-        <px-popover id="userPopover" enhanced="true" for="userNameButton" hide-overlay="true">
-          <button id="logoutButton" class="btn btn--bare" style="min-width: 5em"><i class="fa fa-sign-out text--center u-mr--"></i> Sign Out</button>
+        <px-popover id="userPopover" orientation="bottom" enhanced="true" for="userNameButton" hide-overlay="true">
+          <button id="logoutButton" class="btn btn--bare" style="width: 120px"><i class="fa fa-sign-out text--center u-mr--"></i> Sign Out</button>
         </px-popover>
-        <button id="userNameButton" name="userNameButton" class="btn btn--bare">
+        <button id="userNameButton" name="userNameButton" class="btn btn--bare px-login-button px-login-user-button">
           <i class="fa fa-user text--center u-mr--"></i>
           <span class="u-mh--">{{userName}}</span>
-          <i class="fa fa-angle-up u-ml--"></i>
+          <i class="fa fa-angle-down u-ml--"></i>
         </button>
       </div>
     </div>

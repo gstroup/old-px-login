@@ -37,6 +37,16 @@ $inuit-enable-btn--icon : true;
 $inuit-enable-btn--bare : true;
 @import "px-buttons-design/_objects.buttons.scss";
 
+.px-login-button {
+    color: var(--px-login-color, $gray5);
+}
+
+.px-login-user-button {
+    width: 180px; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+}
 // Component
 
 // Trumps
