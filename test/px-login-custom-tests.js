@@ -2,7 +2,7 @@
 let runCustomTests = () => {
   // Place any setup steps like variable declaration and initialization here
   let server;
-  const fakeUserInfo = '{"username": "FromServer"}';
+  const fakeUserInfo = '{"user_name": "FromServer"}';
 
   setup(() => {
     server = sinon.fakeServer.create();
@@ -74,7 +74,7 @@ let runCustomTests = () => {
       server.respond();
 
       flush(() => {
-        assert.equal(loginEl.userName, JSON.parse(fakeUserInfo).username);
+        assert.equal(loginEl.userName, JSON.parse(fakeUserInfo).user_name);
         assert.deepEqual(loginEl.userInfo, JSON.parse(fakeUserInfo));
         done();
       });      
